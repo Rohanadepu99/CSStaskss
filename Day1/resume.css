@@ -1,0 +1,24 @@
+body{
+    background-color:rgb(191, 193, 185);
+    }
+    p
+    {
+    border:5px solid green
+    }
+    img{
+        height: 159px;
+        
+        }
+        .hello{
+            display: flex;
+            justify-content: space-between;
+        }
+        #bor{
+            background-color: grey;
+            color: white;
+            padding:5px ;
+        }
+        .qwe{
+            padding: 0;
+        }
+    
