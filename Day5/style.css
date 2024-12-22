@@ -8,6 +8,7 @@
 .container {
 	width: 500px;
 	margin: auto;
+    
 }
 .chat {
 	display: flex;
@@ -65,7 +66,7 @@
 }
 
 .chat-box {
-	background: url('../img/bg.jpeg');
+	background: url('../images/wallpaper.png');
 	background-attachment: fixed;
 	padding-left: 20px;
 	overflow-y: scroll;
