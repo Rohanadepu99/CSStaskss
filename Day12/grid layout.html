@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layouts</title>
+    <center><h1>Grid Layouts</h1></center><br>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+
+        .parent{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(14,1fr);
+            grid-template-areas: 
+            "HEADER"
+            "MENU"
+            "HERO"
+            "HERO"
+            "HERO"
+            "MAIN"
+            "MAIN"
+            "MAIN"
+            "BANNER"
+            "BANNER"
+            "EXTRA"
+            "EXTRA"
+            "IMAGE"
+            "IMAGE";
+
+            justify-content: space-between;
+            
+            flex-basis: 15%;
+            gap: 5px;
+            height: 650px;
+        }
+        
+        .child1{
+            grid-area: HEADER;
+            background-color: rgb(15, 15, 37);
+            color: white;
+    
+            
+        }
+        .child2{
+            grid-area: MENU;
+            background-color: rgb(74, 194, 41);
+    
+        }
+        .child3{
+            grid-area: HERO;
+            background-color: rgb(183, 164, 23);
+            color: white;
+           
+        }
+        .child4{
+            grid-area: MAIN;
+            background-color: rgb(39, 39, 160);
+            color: white;
+
+
+        }
+        .child5{
+            grid-area: BANNER;
+            background-color: rgb(230, 157, 94);
+           
+        }
+        .child6{
+            grid-area: EXTRA;
+            background-color: aqua;
+            
+        }
+        .child7{
+            grid-area: IMAGE;
+            background-color: aquamarine;
+            
+        
+        }
+
+        .parent1{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-areas: 
+            "HEADER HEADER HEADER HEADER"
+            "HERO HERO HERO HERO "
+            "HERO HERO HERO HERO"
+            "HERO HERO HERO HERO"
+            "HERO HERO HERO HERO"
+            "MENU MAIN MAIN MAIN"
+            "MENU MAIN MAIN MAIN"
+            "MENU MAIN MAIN MAIN"
+            "MENU MAIN MAIN MAIN"
+            "MENU BANNER BANNER BANNER"
+            "MENU BANNER BANNER BANNER"
+            "MENU EXTRA EXTRA IMAGE"
+            "MENU EXTRA EXTRA IMAGE";
+    
+            height: 90vh;
+            gap: 5px;
+            flex-basis: 30%;
+        }
+        .a{
+            grid-area: HEADER;
+            background-color: rgb(15, 15, 41);
+            color: white;
+        }
+        .b{
+            grid-area: HERO;
+            background-color: rgb(28, 57, 202);
+            color: white;
+        }
+        .c{
+            grid-area: MENU;
+            background-color: rgb(224, 64, 91);
+            color: white;
+        }
+        .d{
+            grid-area: MAIN;
+            background-color: rgb(15, 15, 41);
+            color: white;
+        }
+        .e{
+            grid-area: BANNER;
+            background-color: rgb(230, 157, 94);
+            color: white;
+        }
+        .f{
+            grid-area: EXTRA;
+            background-color: aqua;
+
+        }
+        .g{
+            grid-area: IMAGE;
+            background-color: aquamarine;
+        }
+        .parent2 {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-areas: 
+        "HEADER MENU MENU MENU"
+        "HERO HERO HERO HERO"
+        "HERO HERO HERO HERO"
+        "HERO HERO HERO HERO"
+        "HERO HERO HERO HERO"
+        "HERO HERO HERO HERO"
+        "HERO HERO HERO HERO"
+        "MAIN MAIN SPACE IMAGE"
+        "MAIN MAIN SPACE EXTRA"
+        "BANNER BANNER BANNER BANNER"
+        "BANNER BANNER BANNER BANNER";
+        gap: 5px;
+    
+        flex-basis: 45%;
+        height: 90vh;
+    }
+
+    
+    
+    .A{
+        grid-area: HEADER;
+        background-color: rgb(6, 6, 39);
+        color: white;
+
+    }
+    .B{
+        grid-area: MENU;
+        background-color: rgb(224, 64, 91); 
+    }
+    .C{
+        grid-area: HERO;
+        background-color: blue;
+
+    }
+    .D{
+        grid-area: MAIN;
+        background-color: rgb(6, 6, 39);
+        color: white;
+    }
+    .E{
+        grid-area: SPACE;
+        background-color: rgb(246, 252, 250);
+    }
+    .F{
+        grid-area: IMAGE;
+        background-color: aquamarine;
+    }
+    .G{
+        grid-area: EXTRA;
+        background-color: aqua;
+    }
+    .H{
+        grid-area: BANNER;
+        background-color: rgb(212, 151, 98);
+    }
+    .parent > div, .parent1 > div, .parent2 > div {
+    padding: 20px;
+    text-align: center;
+}
+
+
+        
+
+    </style>
+</head>
+<body> 
+    <div class="container">
+    <div class="parent">
+    
+        <div class="child1">HEADER</div>
+        <div class="child2">MENU</div>
+        <div class="child3">HERO</div>
+        <div class="child4">VILLAIN</div>
+        <div class="child5">BANNER</div>
+        <div class="child6">EXTRA</div>
+        <div class="child7">IMAGE</div>
+
+    </div>
+
+    <div class="parent1">
+        
+        <div class="a">HEADER</div>
+        <div class="b">HERO</div>
+        <div class="c">VILLAIN</div>
+        <div class="d">MAIN</div>
+        <div class="e">BANNER</div>
+        <div class="f">EXTRA</div>
+        <div class="g">IMAGE</div>
+
+    </div>
+    
+    <div class="parent2">
+        <div class="A">HEADER</div>
+        <div class="B">MENU</div>
+        <div class="C">HERO</div>
+        <div class="D">MAIN</div>
+        <div class="E">SPACE</div>
+        <div class="F">IMAGE</div>
+        <div class="G">EXTRA</div>
+        <div class="H">BANNER</div>
+    </div>
+</div>
+    
+</body>
+</html>
