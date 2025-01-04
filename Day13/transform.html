@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transformations</title>
+    <style>
+
+        div{
+            text-align: center;
+            border: 3px solid black;
+            border-radius: 20px;
+            padding: 50px;
+            background-color: aqua;
+        }
+        body {
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        img {
+            width: 300px;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+        .buttons{ 
+            margin-top: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #3900b3;
+        }
+    </style>
+</head>
+<body style="background-color: azure;">
+    
+    <div class="buttons">
+        <button onclick="applyTranslate()">Translate</button>
+        <button onclick="applyRotate()">Rotate</button>
+        <button onclick="applyScale()">Scale</button>
+        <button onclick="applySkew()">Skew</button><br><br>
+        <img src="https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg?ixlib=rb-4.1.0&rect=4%2C12%2C2679%2C1521&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" alt="Example Image" id="image">
+  
+    </div>
+    <script>
+        const image = document.getElementById('image');
+
+        function applyTranslate() {
+            image.style.transform = 'translate(50px, 30px)';
+        }
+
+        function applyRotate() {
+            image.style.transform = 'rotate(45deg)';
+        }
+
+        function applyScale() {
+            image.style.transform = 'scale(1.5)';
+        }
+
+        function applySkew() {
+            image.style.transform = 'skew(20deg, 10deg)';
+        }
+
+        function resetTransform() {
+            image.style.transform = 'none';
+        }
+    </script>
+</body>
+</html>
