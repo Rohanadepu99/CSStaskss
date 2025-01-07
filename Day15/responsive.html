@@ -1,0 +1,443 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <title>Deployment_pages</title> 
+    <style>
+        * { 
+  margin: 0%; 
+  padding: 0%; 
+  box-sizing: border-box; 
+} 
+.main-nav { 
+  position: fixed; 
+  background-color: #fff; 
+  width: 100vw; 
+  height: 10vh; 
+  z-index: 1; 
+} 
+a { 
+  text-decoration: none; 
+  color: black; 
+} 
+.nav { 
+  padding: 15px; 
+  position: relative; 
+  /* top: -10.5px; */ 
+  display: flex; 
+  justify-content: space-between; 
+} 
+.nav-1 { 
+  margin-left: 4%; 
+} 
+.sub_nav { 
+  display: flex; 
+  width: 30%; 
+  justify-content: space-between; 
+} 
+ 
+.nav-2, 
+.nav-3, 
+.nav-4 > a { 
+  letter-spacing: 2px; 
+  font-size: 20px; 
+} 
+ 
+b { 
+  background-color: black; 
+  color: antiquewhite; 
+  font-size: 20px; 
+  letter-spacing: 1.5px; 
+} 
+.main-1 { 
+  position: relative; 
+} 
+.child-1 { 
+  position: relative; 
+  display: inline-block; 
+} 
+.subchild-1 { 
+  background-color: rgba(91, 90, 90, 0.7); 
+  color: white; 
+  position: absolute; 
+  z-index: 0; 
+  top: 50%; 
+  left: 40%; 
+  font-size: 50px; 
+  padding: 10px; 
+} 
+.subchild-2 { 
+  color: aliceblue; 
+  position: absolute; 
+  z-index: 0; 
+  top: 50%; 
+  left: 47%; 
+  font-size: 50px; 
+  padding: 10px; 
+  letter-spacing: 4px; 
+} 
+.navchild { 
+  letter-spacing: 3px; 
+  font-size: 20px; 
+} 
+/* main-nav,a,nav,nav-1,nav-2,nav-3,nav-4,b,main-1,child-1,subchild-1,subchild-2 */ 
+/* projects */ 
+.main-2 { 
+  display: grid; 
+  grid-template-columns: auto auto auto auto; 
+  margin: 20px; 
+} 
+.child5, 
+.child2, 
+.child3, 
+.child4 { 
+  position: relative; 
+  display: inline-block; 
+  margin-left: 3.6%; 
+  margin: 10px; 
+} 
+.subchild-3 { 
+  background-color: black; 
+  color: aliceblue; 
+  position: absolute; 
+  z-index: 0; 
+  top: 0px; 
+  padding: 10px; 
+} 
+/* main-2,child2,child3,child4,child5,subchild-3,h1 */ 
+/* About */ 
+.subchild-4 { 
+  margin: 20px; 
+  font-size: 15px; 
+  letter-spacing: 1.2px; 
+} 
+/* main-nav,a,nav,nav-1,nav-2,nav-3,nav-4,b,main-1,child-1,subchild-1,subchild-2 */ 
+/* main-2,child2,child3,child4,child5,subchild-3,h1 */ 
+ 
+.child6 { 
+  font-size: 20px; 
+} 
+.child7 { 
+  font-size: 20px; 
+} 
+.main-3 { 
+  display: grid; 
+  grid-template-columns: auto auto auto auto; 
+  margin: 20px; 
+} 
+.submain-3 { 
+  margin: 10px; 
+} 
+.child8 { 
+  width: 100%; 
+  padding: 10px; 
+} 
+input { 
+  width: 90%; 
+  margin: 20px; 
+  padding: 10px; 
+  font-size: 20px; 
+} 
+.sub-contact { 
+  margin: 20px; 
+  padding: 10px; 
+  font-size: 20px; 
+} 
+ 
+footer { 
+  text-align: center; 
+  background-color: rgb(0, 0, 0); 
+  color: #fff; 
+  padding: 10px; 
+} 
+.main-4 { 
+  margin-left: 10%; 
+} 
+.nav-5 { 
+  visibility: hidden; 
+  display: none; 
+} 
+@media screen and (width<576px) { 
+  .sub_nav { 
+    justify-content: end; 
+  } 
+  .nav-5 { 
+    visibility: visible; 
+    display: inline; 
+  } 
+  .nav-2 { 
+    visibility: hidden; 
+    display: none; 
+  } 
+  .nav-3 { 
+    visibility: hidden; 
+    display: none; 
+  } 
+  .nav-4 { 
+    visibility: hidden; 
+    display: none; 
+  } 
+  .subchild-1 { 
+    background-color: rgba(91, 90, 90, 0.7); 
+    color: white; 
+    position: absolute; 
+    z-index: 0; 
+    top: 50%; 
+    left: 40%; 
+    font-size: 100%; 
+    padding: 10px; 
+  } 
+  .subchild-2 { 
+    color: aliceblue; 
+    position: absolute; 
+    z-index: 0; 
+    top: 50%; 
+    left: 47%; 
+    font-size: 100%; 
+    padding: 10px; 
+    letter-spacing: 4px; 
+  } 
+  .main-2 { 
+    display: grid; 
+    grid-template-columns: auto auto; 
+    margin: 20px; 
+  } 
+  .main-3 { 
+    display: grid; 
+    grid-template-columns: auto; 
+    margin: 20px; 
+  } 
+} 
+@media screen and (width>576px) and (width<768px) { 
+  .sub_nav { 
+    justify-content: end; 
+  } 
+  .nav-5 { 
+    visibility: visible; 
+    display: inline; 
+  } 
+  .nav-2 { 
+    visibility: hidden; 
+    display: none; 
+  } 
+  .nav-3 { 
+    visibility: hidden; 
+    display: none; 
+  } 
+  .nav-4 { 
+    visibility: hidden; 
+    display: none; 
+  } 
+  .subchild-1 { 
+    background-color: rgba(91, 90, 90, 0.7); 
+    color: white; 
+    position: absolute; 
+    z-index: 0; 
+    top: 50%; 
+    left: 40%; 
+    font-size: 100%; 
+    padding: 10px; 
+  } 
+  .subchild-2 { 
+    color: aliceblue; 
+    position: absolute; 
+    z-index: 0; 
+    top: 50%; 
+    left: 47%;
+    font-size: 100%; 
+    padding: 10px; 
+    letter-spacing: 4px; 
+  } 
+  .main-2 { 
+    display: grid; 
+    grid-template-columns: auto auto; 
+    margin: 20px; 
+  } 
+  .main-3 { 
+    display: grid; 
+    grid-template-columns: auto auto; 
+    margin: 20px; 
+  } 
+}
+
+    </style>
+    <link rel="stylesheet" href="style.css" /> 
+    <link 
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" 
+      rel="stylesheet" 
+    /> 
+  </head> 
+  <body> 
+    <div class="main" id="main"> 
+      <div class="main-nav"> 
+        <div class="nav"> 
+          <div class="nav-1"> 
+            <a href="#main" 
+              ><b style="letter-spacing: 4px">BR</b 
+              ><span class="navchild"> Architects</span></a 
+            > 
+          </div> 
+          <div class="sub_nav"> 
+            <div class="nav-2"><a href="#Projects">Projects</a></div> 
+            <div class="nav-3"><a href="#About">About</a></div> 
+            <div class="nav-4"><a href="#contact">Contact</a></div> 
+            <div class="nav-5"> 
+              <a href=""><i class="bx bx-menu"></i></a> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+      <div class="main-1"> 
+        <div class="child-1"> 
+          <img src="./architect.jpg" alt="" height="100%" width="100%" /> 
+          <span class="subchild-1">BR </span 
+          ><span class="subchild-2">Architects</span> 
+        </div> 
+      </div> 
+    </div> 
+    <hr /> 
+ 
+    <!-- Project Section --> 
+    <div id="Projects"> 
+      <h1>Projects</h1> 
+      <hr /> 
+      <div class="main-2"> 
+        <div class="child5"> 
+          <img src="./house5.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Summer House</p> 
+        </div> 
+        <div class="child2"> 
+          <img src="./house2.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Brick House</p> 
+        </div> 
+        <div class="child3"> 
+          <img src="./house3.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Renovated</p> 
+        </div> 
+        <div class="child4"> 
+          <img src="./house4.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Barn House</p> 
+        </div> 
+        <!-- </div><div class="main-2"> --> 
+        <div class="child5"> 
+          <img src="./house2.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Summer House</p> 
+        </div> 
+        <div class="child2"> 
+          <img src="./house5.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Brick House</p> 
+        </div> 
+        <div class="child3"> 
+          <img src="./house4.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Renovated</p> 
+        </div> 
+        <div class="child4"> 
+          <img src="./house3.jpg" alt="" height="200px" width="250px" /> 
+          <p class="subchild-3">Barn House</p> 
+        </div> 
+      </div> 
+    </div> 
+    <hr /> 
+    <!-- About Section --> 
+    <div id="About"> 
+      <h1>About</h1> 
+      <hr /> 
+      <p class="subchild-4"> 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+        commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt 
+        in culpa qui officia deserunt mollit anim id est laborum consectetur 
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+        laboris nisi ut aliquip ex ea commodo consequat. 
+      </p> 
+      <div class="main-3"> 
+        <div class="submain-3"> 
+          <img src="./team2.jpg" alt="" height="200px" , width="100%" /> 
+          <h1>Dan Star</h1> 
+          <br /> 
+          <p class="child6">CEO & Founder</p> 
+          <br /> 
+          <p class="child7"> 
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse 
+            sodales pellentesque elementum. 
+          </p> 
+          <br />
+          <button class="child8">Contact</button> 
+        </div> 
+        <div class="submain-3"> 
+          <img src="./team1.jpg" alt="" height="200px" , width="100%" /> 
+          <h1>Dan Star</h1> 
+          <br /> 
+          <p class="child6">Architect</p> 
+          <br /> 
+          <p class="child7"> 
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse 
+            sodales pellentesque elementum. 
+          </p> 
+          <br /> 
+          <button class="child8">Contact</button> 
+        </div> 
+        <div class="submain-3"> 
+          <img src="./team3.jpg" alt="" height="200px" , width="100%" /> 
+          <h1>Dan Star</h1> 
+          <br /> 
+          <p class="child6">Architect</p> 
+          <br /> 
+          <p class="child7"> 
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse 
+            sodales pellentesque elementum. 
+          </p> 
+          <br /> 
+          <button class="child8">Contact</button> 
+        </div> 
+        <div class="submain-3"> 
+          <img src="./team4.jpg" alt="" height="200px" , width="100%" /> 
+          <h1>Dan Star</h1> 
+          <br /> 
+          <p class="child6">Architect</p> 
+          <br /> 
+          <p class="child7"> 
+            Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse 
+            sodales pellentesque elementum. 
+          </p> 
+          <br /> 
+          <button class="child8">Contact</button> 
+        </div> 
+      </div> 
+    </div> 
+    <div id="contact"> 
+      <hr /> 
+      <h1>Contact</h1> 
+      <hr /> 
+      <br /> 
+      <p style="font-size: 18px"> 
+        Lets get in touch and talk about your next Project 
+      </p> 
+      <form action=""> 
+        <input type="text" placeholder=" Name" /><br /> 
+        <input type="email" placeholder=" email" /><br /> 
+        <input type="text" placeholder=" Subject" /><br /> 
+        <input type="text" placeholder="Comment" /><br /> 
+        <button class="sub-contact">SEND MESSAGE</button> 
+      </form> 
+    </div> 
+    <!-- <img src="img/image.png" alt="" width="90%" height="600px"><br><br> --> 
+    <div class="main-4"> 
+      <img src="./map.jpg" alt="" width="90%" height="600px" /><br /><br /> 
+    </div> 
+    <footer> 
+      <div class="footer"> 
+        Powered by 
+        <a 
+          href="https://www.w3schools.com/w3css/default.asp" 
+          target="_blank" 
+          style="color: white" ; 
+          >w3.css</a 
+        > 
+      </div> 
+    </footer> 
+  </body> 
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+
+    .my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
+   
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+}
+.animate{
+  width:auto;
+  height:200px;
+  background-color:darkorange;
+}
+.animate__heartBeat {
+  --animate-duration: 2s;
+   font-size: 50px;
+  color:brown;
+  margin-left: 250px;
+  margin-top: 50px;
+}
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s; 
+}
+.ui{
+  background-color: darkgrey;
+  height:400px;
+} 
+.card {
+  position: relative;
+  width: 220px;
+  height: 320px;
+  background: mediumturquoise;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-left: 150px;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: lightblue;
+  transition: all 0.5s;
+}
+
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.card:hover:after {
+  content: "HELLO";
+}
+/* body {
+background-color: #000;
+  margin: 0;
+overflow: hidden;
+} */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+	font-family: "Russo One", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #365FA0;
+	font-size: 100px;
+   
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1); }
+	80%  {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1); stroke-width: 3; }
+	100% {
+		fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {
+  background-color:burlywood;
+  width:auto;
+  height:300px;
+}
+.storyset{
+  background-color:honeydew;
+}
+.storyset img{
+  width:auto;
+  height:400px;
+  margin-left: 100px;
+
+}
+.parallax {
+  /* The image used */
+  background-image:url("prabhas\ anushka.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+}
+ 
+
+
+</style> 
+ 
+  
+<script>
+    document.documentElement.style.setProperty('--animate-duration', '2s');
+    document.documentElement.style.setProperty('--animate-duration', '.5s');
+</script>
+</head>
+<body>
+   <div class="animate"> 
+    <h1> 1.Animate.Style website</h1> 
+  <div class="animate__heartBeat  "> Animated element</div>
+  </div> 
+  <div class="ui"> 
+  <h1> 2.Uiverse</h1>
+<div class="card">HOVER</div>
+ </div>
+ <div class="wrapper"> 
+ <h1> 3.CSS Portal</h1>
+  
+	<svg>
+		<text x="50%" y="30%" dy=".35em" text-anchor="middle">
+			CSS Portal
+		</text>
+	</svg>
+</div>
+<div class="storyset"> 
+  <h1>4.Storyset</h1>
+  <img src="./darling.jpg">
+</div>
+  <h1>5.Parallax effect</h1>
+<div class="parallax">
+<div style="height:1000px;font-size:36px;color: white;">
+Scroll Up and Down this page to see the parallax scrolling effect.
+This div is just here to enable scrolling.
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+</div>
+</body>
+</html>
